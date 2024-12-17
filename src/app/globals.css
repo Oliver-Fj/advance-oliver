@@ -25,3 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 14)); /* Ancho de card * número de testimonios */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 50s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll-tech {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 24)); /* Ancho de card * número total de tecnologías */
+  }
+}
+
+.animate-scroll-tech {
+  animation: scroll-tech 60s linear infinite; /* Aumenté el tiempo para que sea más suave */
+}
+
+.animate-scroll-tech:hover {
+  animation-play-state: paused;
+}
